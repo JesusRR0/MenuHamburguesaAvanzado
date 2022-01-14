@@ -1,0 +1,148 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(burger.jpg);
+    font-family:exo;
+    background-size:100vw 100vh;
+    
+}
+
+h1{
+    font-family: Lacquer;
+    font-size:3vw;
+    color:whitesmoke;
+    position:absolute;
+    left:43vw;
+}
+
+.padre{
+    background-color:#A4DBB1;
+    width:20vw;
+    height:100vh;
+    position:relative;
+    bottom:13vh;
+    float:left;
+    right:20vw;
+    transition:all 0.3s linear;
+}
+
+.menu{
+    padding-top:13vh;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+a:hover{
+    font-weight:900;
+    color:darkgreen;
+    text-decoration:underline;
+}
+
+main{
+    width:60vw;
+    height:80vh;
+    float:right;
+}
+
+main p{
+   background-color:rgba(140, 135, 135, 0.7);
+   font-size:1.2vw;
+   font-weight: bold;
+   text-align: justify;
+   border-radius:10px;
+   width:55vw;
+   height:15vw;
+   margin-top:15vh;
+   padding:2vh;
+   line-height:3.6vh;
+   position:absolute;
+   left:40vw;
+   
+}
+
+.boton span{
+    background-color:orange;
+    border-radius: 3px;
+    width:2.5vw;
+    height:0.6vh;
+    display:block;
+    z-index:5;
+    margin-top:1vh;
+    position: relative;
+    left:2vw;
+    
+}
+
+ul li{
+    margin:3vh;
+    font-size:1.3vw;
+    list-style: none;
+}
+
+input[type="checkbox"]{
+    position: relative;
+    top:5.5vh;
+    left:0.8vw;
+    width:5vw;
+    height:5vh;
+    z-index: 10;
+    opacity:0;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked ~ .padre{
+    transform: translate(20vw)
+    
+}
+
+.barra1{
+    transition:all 0.5s linear;
+}
+.barra2{
+    transition:all 0.3s linear;
+}
+.barra3{
+    transition:all 0.5s linear;
+}
+.boton{
+    position: relative;
+    margin-top:1vh;
+    top:1vh;
+    z-index: 1;
+    width:2.5vw;
+    height:1.8vh;
+    transition:all 0.5s linear 0.5s;
+}
+input[type="checkbox"]:checked ~ .boton{
+    transform:rotatez(-45deg);
+    
+}
+
+input[type="checkbox"]:checked ~ .boton .barra1{
+    transform-origin: left;
+    background-color:green;
+    transform:translate(0px,5px);
+    
+    
+}
+input[type="checkbox"]:checked ~ .boton .barra2{
+    transform-origin: left;
+    transform:rotatey(90deg);
+    background-color:green;
+    opacity:0;
+}
+
+
+input[type="checkbox"]:checked ~ .boton .barra3{
+    transform-origin: right;
+    background-color:green;
+    transform: rotate(90deg) translate(0px,22.5px);
+    
+}
